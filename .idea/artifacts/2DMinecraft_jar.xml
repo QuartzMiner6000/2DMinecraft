@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="2DMinecraft:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/2DMinecraft_jar</output-path>
+    <root id="archive" name="2DMinecraft.jar">
+      <element id="module-output" name="2DMinecraft" />
+    </root>
+  </artifact>
+</component>
