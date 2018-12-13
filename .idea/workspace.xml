@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e97a3827-8f3f-417d-a0db-b8f8c3743f65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/quartzy/mc/entities/player/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/quartzy/mc/entities/player/Inventory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,15 +27,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/quartzy/mc/entities/player/Inventory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="158" column="21" selection-start-line="158" selection-start-column="21" selection-end-line="158" selection-end-column="21" />
+            <state relative-caret-position="295">
+              <caret line="140" column="64" lean-forward="true" selection-start-line="140" selection-start-column="64" selection-end-line="140" selection-end-column="64" />
               <folding>
-                <element signature="e#10780#10781#0" expanded="true" />
-                <element signature="e#10838#10839#0" expanded="true" />
-                <element signature="e#10903#10904#0" expanded="true" />
-                <element signature="e#10965#10966#0" expanded="true" />
-                <element signature="e#11046#11047#0" expanded="true" />
-                <element signature="e#11127#11128#0" expanded="true" />
+                <element signature="e#11079#11080#0" expanded="true" />
+                <element signature="e#11137#11138#0" expanded="true" />
+                <element signature="e#12453#12454#0" expanded="true" />
+                <element signature="e#12515#12516#0" expanded="true" />
+                <element signature="e#12596#12597#0" expanded="true" />
+                <element signature="e#12677#12678#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,7 +182,7 @@
     <property name="SearchEverywhereHistoryKey" value="Ima&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/gfx/ImageLoader.java&#10;hand&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/util/Handler.java&#10;Key&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/input/KeyBind.java&#10;Plank&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/items/Plank.java&#10;Wa&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/items/Water.java&#10;Sa&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/items/Sand.java&#10;Bri&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/items/Brick.java&#10;Dir&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/items/Dirt.java&#10;Play&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/entities/player/Player.java&#10;In&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/entities/player/Inventory.java&#10;Tes&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/Tester.java&#10;File&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/util/FileManager.java&#10;MouseMa&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/input/MouseManager.java&#10;Mouse&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/input/Mouse.java&#10;Item&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/items/Items.java&#10;Ha&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/util/Handler.java&#10;Inve&#9;FILE&#9;file://C:/Users/QuartzMiner6000/IdeaProjects/2DMinecraft/src/com/quartzy/mc/entities/player/Inventory.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544724141359" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544724225428" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -193,7 +190,7 @@
     <property name="node.js.selected.package.tslint" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15609756" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -341,12 +338,20 @@
       <workItem from="1543689100265" duration="306000" />
       <workItem from="1543750925021" duration="2682000" />
       <workItem from="1543759717875" duration="10000" />
-      <workItem from="1544722332362" duration="1668000" />
+      <workItem from="1544722332362" duration="1981000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixed inventory movement">
+      <created>1544724218197</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544724218197</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48787000" />
+    <option name="totallyTimeSpent" value="49100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -361,7 +366,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.13908046" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.18045977" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -387,6 +392,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed inventory movement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed inventory movement" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -781,15 +790,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/quartzy/mc/entities/player/Inventory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="158" column="21" selection-start-line="158" selection-start-column="21" selection-end-line="158" selection-end-column="21" />
+        <state relative-caret-position="295">
+          <caret line="140" column="64" lean-forward="true" selection-start-line="140" selection-start-column="64" selection-end-line="140" selection-end-column="64" />
           <folding>
-            <element signature="e#10780#10781#0" expanded="true" />
-            <element signature="e#10838#10839#0" expanded="true" />
-            <element signature="e#10903#10904#0" expanded="true" />
-            <element signature="e#10965#10966#0" expanded="true" />
-            <element signature="e#11046#11047#0" expanded="true" />
-            <element signature="e#11127#11128#0" expanded="true" />
+            <element signature="e#11079#11080#0" expanded="true" />
+            <element signature="e#11137#11138#0" expanded="true" />
+            <element signature="e#12453#12454#0" expanded="true" />
+            <element signature="e#12515#12516#0" expanded="true" />
+            <element signature="e#12596#12597#0" expanded="true" />
+            <element signature="e#12677#12678#0" expanded="true" />
           </folding>
         </state>
       </provider>
