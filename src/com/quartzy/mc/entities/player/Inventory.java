@@ -88,24 +88,10 @@ public class Inventory {
         handler.W.addOnPressed(new Pressed() {
             @Override
             public void pressed() {
-                if (opened && (selectedStackIndex-9 == 0 || !(selectedStackIndex-9<=0))){
-                    selectedStackIndex-=9;
-                }
-                if (handler.SHIFT.isPressed() && opened){
-                    if (ShiftSelectedItemStack<27){
-                        items[ShiftSelectedItemStack] = null;
-                        if (selectedStackIndex<27){
-                            items[selectedStackIndex] = selectedItemStack;
-                        }else {
-                            itemsInHotbar[selectedStackIndex-27] = selectedItemStack;
-                        }
-                    }else {
-                        itemsInHotbar[ShiftSelectedItemStack-27] = null;
-                        if (selectedStackIndex<27){
-                            items[selectedStackIndex] = selectedItemStack;
-                        }else {
-                            itemsInHotbar[selectedStackIndex-27] = selectedItemStack;
-                        }
+                if (opened) {
+                    ShiftSelectedItemStack = selectedStackIndex;
+                    if ((selectedStackIndex - 9 == 0 || !(selectedStackIndex - 9 <= 0))) {
+                        selectedStackIndex -= 9;
                     }
                 }
             }
@@ -113,24 +99,10 @@ public class Inventory {
         handler.S.addOnPressed(new Pressed() {
             @Override
             public void pressed() {
-                if (opened && (selectedStackIndex+9 == 0 || !(selectedStackIndex+9>=36))){
-                    selectedStackIndex+=9;
-                }
-                if (handler.SHIFT.isPressed() && opened){
-                    if (ShiftSelectedItemStack<27){
-                        items[ShiftSelectedItemStack] = null;
-                        if (selectedStackIndex<27){
-                            items[selectedStackIndex] = selectedItemStack;
-                        }else {
-                            itemsInHotbar[selectedStackIndex-27] = selectedItemStack;
-                        }
-                    }else {
-                        itemsInHotbar[ShiftSelectedItemStack-27] = null;
-                        if (selectedStackIndex<27){
-                            items[selectedStackIndex] = selectedItemStack;
-                        }else {
-                            itemsInHotbar[selectedStackIndex-27] = selectedItemStack;
-                        }
+                if (opened) {
+                    ShiftSelectedItemStack = selectedStackIndex;
+                    if ((selectedStackIndex + 9 == 0 || !(selectedStackIndex + 9 >= 36))) {
+                        selectedStackIndex += 9;
                     }
                 }
             }
@@ -138,24 +110,10 @@ public class Inventory {
         handler.D.addOnPressed(new Pressed() {
             @Override
             public void pressed() {
-                if ((selectedStackIndex+1 == 0 || (selectedStackIndex+1) % 9 != 0) && opened){
-                    selectedStackIndex++;
-                }
-                if (handler.SHIFT.isPressed() && opened){
-                    if (ShiftSelectedItemStack<27){
-                        items[ShiftSelectedItemStack] = null;
-                        if (selectedStackIndex<27){
-                            items[selectedStackIndex] = selectedItemStack;
-                        }else {
-                            itemsInHotbar[selectedStackIndex-27] = selectedItemStack;
-                        }
-                    }else {
-                        itemsInHotbar[ShiftSelectedItemStack-27] = null;
-                        if (selectedStackIndex<27){
-                            items[selectedStackIndex] = selectedItemStack;
-                        }else {
-                            itemsInHotbar[selectedStackIndex-27] = selectedItemStack;
-                        }
+                if (opened) {
+                    ShiftSelectedItemStack = selectedStackIndex;
+                    if ((selectedStackIndex + 1 == 0 || (selectedStackIndex + 1) % 9 != 0)) {
+                        selectedStackIndex++;
                     }
                 }
             }
@@ -163,38 +121,175 @@ public class Inventory {
         handler.A.addOnPressed(new Pressed() {
             @Override
             public void pressed() {
-                if ((selectedStackIndex-1 == 0 || (selectedStackIndex) % 9 != 0) && opened){
-                    selectedStackIndex--;
-                }
-                if (handler.SHIFT.isPressed() && opened){
-                    if (ShiftSelectedItemStack<27){
-                        items[ShiftSelectedItemStack] = null;
-                        if (selectedStackIndex<27){
-                            items[selectedStackIndex] = selectedItemStack;
-                        }else {
-                            itemsInHotbar[selectedStackIndex-27] = selectedItemStack;
-                        }
-                    }else {
-                        itemsInHotbar[ShiftSelectedItemStack-27] = null;
-                        if (selectedStackIndex<27){
-                            items[selectedStackIndex] = selectedItemStack;
-                        }else {
-                            itemsInHotbar[selectedStackIndex-27] = selectedItemStack;
-                        }
+                if (opened){
+                    ShiftSelectedItemStack = selectedStackIndex;
+                    if ((selectedStackIndex - 1 == 0 || (selectedStackIndex) % 9 != 0)) {
+                        selectedStackIndex--;
                     }
                 }
             }
         });
-        handler.SHIFT.addOnPressed(new Pressed() {
+        handler.UP.addOnPressed(new Pressed() {
             @Override
             public void pressed() {
-                if (opened){
+                if (opened && (selectedStackIndex - 9 == 0 || !(selectedStackIndex - 9 <= 0))){
                     if (selectedStackIndex<27){
                         selectedItemStack = items[selectedStackIndex];
                     }else {
                         selectedItemStack = itemsInHotbar[selectedStackIndex-27];
                     }
                     ShiftSelectedItemStack = selectedStackIndex;
+                    selectedStackIndex -= 9;
+                    boolean canGo = false;
+                    if (selectedStackIndex<27){
+                        if (items[selectedStackIndex] == null) {
+                            canGo = true;
+                        }
+                    }else {
+                        if (itemsInHotbar[selectedStackIndex-27]==null){
+                            canGo = true;
+                        }
+                    }
+                    if (canGo) {
+                        if (ShiftSelectedItemStack < 27) {
+                            items[ShiftSelectedItemStack] = null;
+                            if (selectedStackIndex < 27) {
+                                items[selectedStackIndex] = selectedItemStack;
+                            } else {
+                                itemsInHotbar[selectedStackIndex - 27] = selectedItemStack;
+                            }
+                        } else {
+                            itemsInHotbar[ShiftSelectedItemStack - 27] = null;
+                            if (selectedStackIndex < 27) {
+                                items[selectedStackIndex] = selectedItemStack;
+                            } else {
+                                itemsInHotbar[selectedStackIndex - 27] = selectedItemStack;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        handler.DOWN.addOnPressed(new Pressed() {
+            @Override
+            public void pressed() {
+                if (opened && (selectedStackIndex + 9 == 0 || !(selectedStackIndex + 9 >= 36))) {
+                    if (selectedStackIndex < 27) {
+                        selectedItemStack = items[selectedStackIndex];
+                    } else {
+                        selectedItemStack = itemsInHotbar[selectedStackIndex - 27];
+                    }
+                    ShiftSelectedItemStack = selectedStackIndex;
+                    selectedStackIndex += 9;
+                    boolean canGo = false;
+                    if (selectedStackIndex<27){
+                        if (items[selectedStackIndex] == null) {
+                            canGo = true;
+                        }
+                    }else {
+                        if (itemsInHotbar[selectedStackIndex-27]==null){
+                            canGo = true;
+                        }
+                    }
+                    if (canGo) {
+                        if (ShiftSelectedItemStack < 27) {
+                            items[ShiftSelectedItemStack] = null;
+                            if (selectedStackIndex < 27) {
+                                items[selectedStackIndex] = selectedItemStack;
+                            } else {
+                                itemsInHotbar[selectedStackIndex - 27] = selectedItemStack;
+                            }
+                        } else {
+                            itemsInHotbar[ShiftSelectedItemStack - 27] = null;
+                            if (selectedStackIndex < 27) {
+                                items[selectedStackIndex] = selectedItemStack;
+                            } else {
+                                itemsInHotbar[selectedStackIndex - 27] = selectedItemStack;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        handler.RIGHT.addOnPressed(new Pressed() {
+            @Override
+            public void pressed() {
+                if (opened && (selectedStackIndex + 1 == 0 || (selectedStackIndex + 1) % 9 != 0)) {
+                    if (selectedStackIndex < 27) {
+                        selectedItemStack = items[selectedStackIndex];
+                    } else {
+                        selectedItemStack = itemsInHotbar[selectedStackIndex - 27];
+                    }
+                    ShiftSelectedItemStack = selectedStackIndex;
+                    selectedStackIndex++;
+                    boolean canGo = false;
+                    if (selectedStackIndex<27){
+                        if (items[selectedStackIndex] == null) {
+                            canGo = true;
+                        }
+                    }else {
+                        if (itemsInHotbar[selectedStackIndex-27]==null){
+                            canGo = true;
+                        }
+                    }
+                    if (canGo) {
+                        if (ShiftSelectedItemStack < 27) {
+                            items[ShiftSelectedItemStack] = null;
+                            if (selectedStackIndex < 27) {
+                                items[selectedStackIndex] = selectedItemStack;
+                            } else {
+                                itemsInHotbar[selectedStackIndex - 27] = selectedItemStack;
+                            }
+                        } else {
+                            itemsInHotbar[ShiftSelectedItemStack - 27] = null;
+                            if (selectedStackIndex < 27) {
+                                items[selectedStackIndex] = selectedItemStack;
+                            } else {
+                                itemsInHotbar[selectedStackIndex - 27] = selectedItemStack;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        handler.LEFT.addOnPressed(new Pressed() {
+            @Override
+            public void pressed() {
+                if (opened && (selectedStackIndex - 1 == 0 || (selectedStackIndex) % 9 != 0)) {
+                    if (selectedStackIndex < 27) {
+                        selectedItemStack = items[selectedStackIndex];
+                    } else {
+                        selectedItemStack = itemsInHotbar[selectedStackIndex - 27];
+                    }
+                    ShiftSelectedItemStack = selectedStackIndex;
+                    selectedStackIndex--;
+                    boolean canGo = false;
+                    if (selectedStackIndex<27){
+                        if (items[selectedStackIndex] == null) {
+                            canGo = true;
+                        }
+                    }else {
+                        if (itemsInHotbar[selectedStackIndex-27]==null){
+                            canGo = true;
+                        }
+                    }
+                    if (canGo) {
+                        if (ShiftSelectedItemStack < 27) {
+                            items[ShiftSelectedItemStack] = null;
+                            if (selectedStackIndex < 27) {
+                                items[selectedStackIndex] = selectedItemStack;
+                            } else {
+                                itemsInHotbar[selectedStackIndex - 27] = selectedItemStack;
+                            }
+                        } else {
+                            itemsInHotbar[ShiftSelectedItemStack - 27] = null;
+                            if (selectedStackIndex < 27) {
+                                items[selectedStackIndex] = selectedItemStack;
+                            } else {
+                                itemsInHotbar[selectedStackIndex - 27] = selectedItemStack;
+                            }
+                        }
+                    }
                 }
             }
         });
@@ -366,15 +461,15 @@ public class Inventory {
             int counter1 = 0;
             int counter2 = 0;
             g.drawImage(Assets.inventory, 224, 314, null);
-            for (int a = 0;a<items.length;a++){
-                if (items[a]!=null){
-                    g.drawImage(items[a].getItem().getTile().getImage(), 234 + (50 * counter1), 320 + (50 * counter2), 40, 40, null);
+            for (int a = 1;a<items.length+1;a++){
+                if (items[a-1]!=null){
+                    g.drawImage(items[a-1].getItem().getTile().getImage(), 234 + (50 * counter1), 320 + (50 * counter2), 40, 40, null);
                     g.setColor(Color.WHITE);
                     g.setFont(new Font("default", Font.BOLD, 20));
-                    g.drawString(items[a].getAmmount() + "", 234 + (50 * counter1)+23, 320 + (50 * counter2)+41);
+                    g.drawString(items[a-1].getAmmount() + "", 234 + (50 * counter1)+23, 320 + (50 * counter2)+41);
                 }
                 counter1++;
-                if (a % 9 == 0 && a != 0) {
+                if (a % 9 == 0) {
                     counter1 = 0;
                     counter2++;
                 }
